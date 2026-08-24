@@ -1,0 +1,404 @@
+{
+  "tag": "pop200_gen50_seed3_ts20_lam0",
+  "config": {
+    "n_pop": 200,
+    "n_gen": 50,
+    "seed": 3,
+    "parsimony": 0.0,
+    "max_depth": 5,
+    "k": 3,
+    "n_train_seeds": 20,
+    "tag": null
+  },
+  "fitness": -148.1472181762591,
+  "size": 84,
+  "train_return": 148.1472181762591,
+  "heldout_return": 128.80577069709025,
+  "tree_main_dict": {
+    "label": "-",
+    "children": [
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "-",
+            "children": [
+              {
+                "label": "tanh",
+                "children": [
+                  {
+                    "label": "-",
+                    "children": [
+                      {
+                        "label": "y",
+                        "children": []
+                      },
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "y",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "vy",
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "*",
+            "children": [
+              {
+                "label": "tanh",
+                "children": [
+                  {
+                    "label": "y",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "label": "-",
+                "children": [
+                  {
+                    "label": "+",
+                    "children": [
+                      {
+                        "label": "-",
+                        "children": [
+                          {
+                            "label": "-",
+                            "children": [
+                              {
+                                "label": "vy",
+                                "children": []
+                              },
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": "ang_vel",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "tanh",
+                            "children": [
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": "ang_vel",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "tanh",
+                            "children": [
+                              {
+                                "label": "leg_r",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "y",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "vy",
+        "children": []
+      }
+    ]
+  },
+  "tree_lat_dict": {
+    "label": "-",
+    "children": [
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "*",
+            "children": [
+              {
+                "label": "/",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "leg_r",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "label": "leg_l",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "label": "*",
+                "children": [
+                  {
+                    "label": "-",
+                    "children": [
+                      {
+                        "label": "vx",
+                        "children": []
+                      },
+                      {
+                        "label": -1.8247958102304853,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "label": "/",
+                    "children": [
+                      {
+                        "label": "-",
+                        "children": [
+                          {
+                            "label": "*",
+                            "children": [
+                              {
+                                "label": "-",
+                                "children": [
+                                  {
+                                    "label": "angle",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": -1.8247958102304853,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "/",
+                                "children": [
+                                  {
+                                    "label": 2.7869726825815047,
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "leg_l",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "/",
+                            "children": [
+                              {
+                                "label": "vx",
+                                "children": []
+                              },
+                              {
+                                "label": "ang_vel",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "label": "ang_vel",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "tanh",
+            "children": [
+              {
+                "label": "tanh",
+                "children": [
+                  {
+                    "label": "+",
+                    "children": [
+                      {
+                        "label": "x",
+                        "children": []
+                      },
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "*",
+                            "children": [
+                              {
+                                "label": "-",
+                                "children": [
+                                  {
+                                    "label": 1.3390861732463657,
+                                    "children": []
+                                  },
+                                  {
+                                    "label": -1.607646556710237,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": -3.331149339411074,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "tanh",
+            "children": [
+              {
+                "label": "-",
+                "children": [
+                  {
+                    "label": "vx",
+                    "children": []
+                  },
+                  {
+                    "label": "leg_l",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "-",
+            "children": [
+              {
+                "label": "/",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "*",
+                        "children": [
+                          {
+                            "label": "-",
+                            "children": [
+                              {
+                                "label": "vx",
+                                "children": []
+                              },
+                              {
+                                "label": "leg_l",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "label": "/",
+                            "children": [
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": "ang_vel",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "leg_l",
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "leg_l",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "label": "/",
+                "children": [
+                  {
+                    "label": "leg_l",
+                    "children": []
+                  },
+                  {
+                    "label": "/",
+                    "children": [
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "leg_r",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "label": "leg_l",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tree_main_full": "(((tanh((y - tanh(y))) - vy) + (tanh(y) * ((((vy - tanh(ang_vel)) - tanh(tanh(ang_vel))) + tanh(tanh(leg_r))) - y))) - vy)",
+  "tree_lat_full": "((((tanh(leg_r) / leg_l) * ((vx - -1.8247958102304853) * ((((angle - -1.8247958102304853) * (2.7869726825815047 / leg_l)) - (vx / ang_vel)) / ang_vel))) + tanh(tanh((x + tanh(((1.3390861732463657 - -1.607646556710237) * -3.331149339411074)))))) - (tanh((vx - leg_l)) + ((tanh(((vx - leg_l) * (tanh(ang_vel) / leg_l))) / leg_l) - (leg_l / (tanh(leg_r) / leg_l)))))"
+}

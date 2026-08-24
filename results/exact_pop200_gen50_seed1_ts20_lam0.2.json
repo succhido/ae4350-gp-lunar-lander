@@ -1,0 +1,263 @@
+{
+  "tag": "pop200_gen50_seed1_ts20_lam0.2",
+  "config": {
+    "n_pop": 200,
+    "n_gen": 50,
+    "seed": 1,
+    "parsimony": 0.2,
+    "max_depth": 5,
+    "k": 3,
+    "n_train_seeds": 20,
+    "tag": null
+  },
+  "fitness": -119.17723377978754,
+  "size": 53,
+  "train_return": 129.77723377978754,
+  "heldout_return": 134.52750066941414,
+  "tree_main_dict": {
+    "label": "+",
+    "children": [
+      {
+        "label": "tanh",
+        "children": [
+          {
+            "label": "tanh",
+            "children": [
+              {
+                "label": "-",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "-",
+                        "children": [
+                          {
+                            "label": "*",
+                            "children": [
+                              {
+                                "label": "*",
+                                "children": [
+                                  {
+                                    "label": -0.5462307503858961,
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "y",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "y",
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "label": "vy",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "*",
+                    "children": [
+                      {
+                        "label": "*",
+                        "children": [
+                          {
+                            "label": -0.5462307503858961,
+                            "children": []
+                          },
+                          {
+                            "label": "y",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "label": "vy",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "tanh",
+        "children": [
+          {
+            "label": "-",
+            "children": [
+              {
+                "label": "*",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "*",
+                            "children": [
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": -0.6671246389608729,
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": -0.6671246389608729,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": -0.5888329599788982,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "label": "vy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tree_lat_dict": {
+    "label": "tanh",
+    "children": [
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "-",
+            "children": [
+              {
+                "label": -1.520670374842835,
+                "children": []
+              },
+              {
+                "label": "+",
+                "children": [
+                  {
+                    "label": "*",
+                    "children": [
+                      {
+                        "label": "+",
+                        "children": [
+                          {
+                            "label": 0.49228346314179205,
+                            "children": []
+                          },
+                          {
+                            "label": "tanh",
+                            "children": [
+                              {
+                                "label": 4.761049481250476,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "label": "/",
+                        "children": [
+                          {
+                            "label": "tanh",
+                            "children": [
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": "angle",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "leg_r",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "*",
+                    "children": [
+                      {
+                        "label": 5.285601671293156,
+                        "children": []
+                      },
+                      {
+                        "label": "/",
+                        "children": [
+                          {
+                            "label": "+",
+                            "children": [
+                              {
+                                "label": -1.520670374842835,
+                                "children": []
+                              },
+                              {
+                                "label": "tanh",
+                                "children": [
+                                  {
+                                    "label": -1.520670374842835,
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "angle",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": 2.750375778246152,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "tree_main_full": "(tanh(tanh((tanh((((-0.5462307503858961 * y) * y) - vy)) - ((-0.5462307503858961 * y) * vy)))) + tanh(((tanh(tanh((tanh(-0.6671246389608729) * tanh(-0.6671246389608729)))) * -0.5888329599788982) - vy)))",
+  "tree_lat_full": "tanh(((-1.520670374842835 - (((0.49228346314179205 + tanh(4.761049481250476)) * (tanh(tanh(angle)) / leg_r)) + (5.285601671293156 * ((-1.520670374842835 + tanh(-1.520670374842835)) / angle)))) + 2.750375778246152))"
+}

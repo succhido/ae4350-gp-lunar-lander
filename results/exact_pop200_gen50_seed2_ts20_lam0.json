@@ -1,0 +1,263 @@
+{
+  "tag": "pop200_gen50_seed2_ts20_lam0",
+  "config": {
+    "n_pop": 200,
+    "n_gen": 50,
+    "seed": 2,
+    "parsimony": 0.0,
+    "max_depth": 5,
+    "k": 3,
+    "n_train_seeds": 20,
+    "tag": null
+  },
+  "fitness": -224.1881786340909,
+  "size": 54,
+  "train_return": 224.1881786340909,
+  "heldout_return": 210.6315447596789,
+  "tree_main_dict": {
+    "label": "+",
+    "children": [
+      {
+        "label": "*",
+        "children": [
+          {
+            "label": "leg_l",
+            "children": []
+          },
+          {
+            "label": "+",
+            "children": [
+              {
+                "label": "*",
+                "children": [
+                  {
+                    "label": "-",
+                    "children": [
+                      {
+                        "label": -0.7748967903613533,
+                        "children": []
+                      },
+                      {
+                        "label": "vy",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "label": "-",
+                    "children": [
+                      {
+                        "label": "*",
+                        "children": [
+                          {
+                            "label": "/",
+                            "children": [
+                              {
+                                "label": -5.592979287285423,
+                                "children": []
+                              },
+                              {
+                                "label": -3.905674114185623,
+                                "children": []
+                              }
+                            ]
+                          },
+                          {
+                            "label": "ang_vel",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "label": "tanh",
+                        "children": [
+                          {
+                            "label": "*",
+                            "children": [
+                              {
+                                "label": -5.592979287285423,
+                                "children": []
+                              },
+                              {
+                                "label": 2.170413278203519,
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "+",
+                "children": [
+                  {
+                    "label": "ang_vel",
+                    "children": []
+                  },
+                  {
+                    "label": "vy",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "-",
+        "children": [
+          {
+            "label": "ang_vel",
+            "children": []
+          },
+          {
+            "label": "vy",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "tree_lat_dict": {
+    "label": "+",
+    "children": [
+      {
+        "label": "*",
+        "children": [
+          {
+            "label": 5.193535389762708,
+            "children": []
+          },
+          {
+            "label": "angle",
+            "children": []
+          }
+        ]
+      },
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "*",
+            "children": [
+              {
+                "label": "tanh",
+                "children": [
+                  {
+                    "label": "-",
+                    "children": [
+                      {
+                        "label": "ang_vel",
+                        "children": []
+                      },
+                      {
+                        "label": "vx",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": 5.193535389762708,
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "*",
+            "children": [
+              {
+                "label": "+",
+                "children": [
+                  {
+                    "label": "y",
+                    "children": []
+                  },
+                  {
+                    "label": "*",
+                    "children": [
+                      {
+                        "label": "-",
+                        "children": [
+                          {
+                            "label": "-",
+                            "children": [
+                              {
+                                "label": "ang_vel",
+                                "children": []
+                              },
+                              {
+                                "label": "-",
+                                "children": [
+                                  {
+                                    "label": "leg_l",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "leg_r",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "leg_r",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "label": "leg_l",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "-",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "ang_vel",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "*",
+                        "children": [
+                          {
+                            "label": "angle",
+                            "children": []
+                          },
+                          {
+                            "label": "leg_l",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tree_main_full": "((leg_l * (((-0.7748967903613533 - vy) * (((-5.592979287285423 / -3.905674114185623) * ang_vel) - tanh((-5.592979287285423 * 2.170413278203519)))) + (ang_vel + vy))) + (ang_vel - vy))",
+  "tree_lat_full": "((5.193535389762708 * angle) + ((tanh((ang_vel - vx)) * 5.193535389762708) + ((y + (((ang_vel - (leg_l - leg_r)) - leg_r) * leg_l)) * (tanh(ang_vel) - tanh((angle * leg_l))))))"
+}

@@ -1,0 +1,136 @@
+{
+  "tag": "pop200_gen50_seed2_ts20_lam0.2",
+  "config": {
+    "n_pop": 200,
+    "n_gen": 50,
+    "seed": 2,
+    "parsimony": 0.2,
+    "max_depth": 5,
+    "k": 3,
+    "n_train_seeds": 20,
+    "tag": null
+  },
+  "fitness": -41.62250425187178,
+  "size": 26,
+  "train_return": 46.822504251871784,
+  "heldout_return": 41.908782683611896,
+  "tree_main_dict": {
+    "label": "-",
+    "children": [
+      {
+        "label": "+",
+        "children": [
+          {
+            "label": "angle",
+            "children": []
+          },
+          {
+            "label": "*",
+            "children": [
+              {
+                "label": -1.9034641533974064,
+                "children": []
+              },
+              {
+                "label": "vy",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "y",
+        "children": []
+      }
+    ]
+  },
+  "tree_lat_dict": {
+    "label": "tanh",
+    "children": [
+      {
+        "label": "-",
+        "children": [
+          {
+            "label": "/",
+            "children": [
+              {
+                "label": "/",
+                "children": [
+                  {
+                    "label": "tanh",
+                    "children": [
+                      {
+                        "label": "-",
+                        "children": [
+                          {
+                            "label": 2.661067399444626,
+                            "children": []
+                          },
+                          {
+                            "label": "ang_vel",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "/",
+                    "children": [
+                      {
+                        "label": "y",
+                        "children": []
+                      },
+                      {
+                        "label": "angle",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "label": "ang_vel",
+                "children": []
+              }
+            ]
+          },
+          {
+            "label": "/",
+            "children": [
+              {
+                "label": "/",
+                "children": [
+                  {
+                    "label": "/",
+                    "children": [
+                      {
+                        "label": -2.62355536026152,
+                        "children": []
+                      },
+                      {
+                        "label": "ang_vel",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "label": "angle",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "label": "ang_vel",
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tree_main_full": "((angle + (-1.9034641533974064 * vy)) - y)",
+  "tree_lat_full": "tanh((((tanh((2.661067399444626 - ang_vel)) / (y / angle)) / ang_vel) - (((-2.62355536026152 / ang_vel) / angle) / ang_vel)))"
+}
