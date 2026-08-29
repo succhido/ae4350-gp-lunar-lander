@@ -219,7 +219,7 @@ def write_lambda_table(stats):
              "% seeds 1-5 (gen-50, 20 training seeds).",
              "\\begin{tabular}{ccccc}",
              "    \\hline",
-             "    $\\lambda$ & Train & Held-out & Gap & Size \\\\",
+             "    $\\lambda$ & Train ($\\uparrow$) & Held-out ($\\uparrow$) & Gap ($\\downarrow$) & Size ($\\downarrow$) \\\\",
              "    \\hline"]
     for lam, tr, ho, gap, sz in rows:
         cells = [f"${lam:g}$"]
@@ -230,11 +230,13 @@ def write_lambda_table(stats):
         "    \\hline",
         "\\end{tabular}",
         "\\par\\smallskip",
-        "{\\footnotesize Shading compares values within a column, from",
+        "{\\footnotesize Column headers mark which direction is better",
+        "($\\uparrow$ higher, $\\downarrow$ lower). Shading follows the same",
+        "direction within each column, from",
         "\\colorbox{teal!5}{\\strut worst} through",
         "\\colorbox{teal!28}{\\strut middle} to",
-        "\\colorbox{teal!50}{\\strut best}, where higher returns but a",
-        "smaller gap and a smaller size count as better.}",
+        "\\colorbox{teal!50}{\\strut best}: dark means a high return in the",
+        "first two columns, but a low gap or size in the last two.}",
     ]
     out = os.path.join(FIG_DIR, "tab-lambda-sweep.tex")
     with open(out, "w") as fh:

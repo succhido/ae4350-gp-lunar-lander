@@ -88,10 +88,16 @@ def main():
                     help=f"nickname(s) ({list(TREES)}) or raw sweep tag(s)")
     ap.add_argument("--seeds", type=int, nargs="+", default=DEFAULT_SEEDS,
                     help="lander scenario seeds to fly for EACH selected tree")
+    ap.add_argument("--fps", type=int, default=50,
+                    help="render speed; physics is unchanged, only the pygame "
+                         "clock (50 = real time, 200 = 4x)")
     args = ap.parse_args()
 
     tags = resolve_tags(args)
     env = gym.make(ENV_ID, render_mode="human")
+    # metadata is a class-level dict; copy before overriding so the change
+    # cannot leak into other envs created in the same process.
+    env.unwrapped.metadata = {**env.unwrapped.metadata, "render_fps": args.fps}
     try:
         for tag in tags:
             watch_one(env, tag, args.seeds)
